@@ -20,10 +20,10 @@ EOT
     remote_virtual_network_id     = string
     resource_group_name           = string
     workspace_id                  = string
-    allow_forwarded_traffic       = optional(bool, false)
-    allow_gateway_transit         = optional(bool, false)
-    allow_virtual_network_access  = optional(bool, true)
-    use_remote_gateways           = optional(bool, false)
+    allow_forwarded_traffic       = optional(bool) # Default: false
+    allow_gateway_transit         = optional(bool) # Default: false
+    allow_virtual_network_access  = optional(bool) # Default: true
+    use_remote_gateways           = optional(bool) # Default: false
   }))
 }
 
