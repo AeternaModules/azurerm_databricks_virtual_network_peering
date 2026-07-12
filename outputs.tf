@@ -1,3 +1,7 @@
+output "databricks_virtual_network_peerings_id" {
+  description = "Map of id values across all databricks_virtual_network_peerings, keyed the same as var.databricks_virtual_network_peerings"
+  value       = { for k, v in azurerm_databricks_virtual_network_peering.databricks_virtual_network_peerings : k => v.id }
+}
 output "databricks_virtual_network_peerings_address_space_prefixes" {
   description = "Map of address_space_prefixes values across all databricks_virtual_network_peerings, keyed the same as var.databricks_virtual_network_peerings"
   value       = { for k, v in azurerm_databricks_virtual_network_peering.databricks_virtual_network_peerings : k => v.address_space_prefixes }
