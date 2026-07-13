@@ -20,10 +20,10 @@ EOT
     remote_virtual_network_id     = string
     resource_group_name           = string
     workspace_id                  = string
-    allow_forwarded_traffic       = optional(bool) # Default: false
-    allow_gateway_transit         = optional(bool) # Default: false
-    allow_virtual_network_access  = optional(bool) # Default: true
-    use_remote_gateways           = optional(bool) # Default: false
+    allow_forwarded_traffic       = optional(bool)
+    allow_gateway_transit         = optional(bool)
+    allow_virtual_network_access  = optional(bool)
+    use_remote_gateways           = optional(bool)
   }))
   # --- Unconfirmed validation candidates, derived from azurerm_databricks_virtual_network_peering's provider source ---
   # Not auto-enabled: either a bespoke provider validator we can't safely translate,
